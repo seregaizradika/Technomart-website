@@ -1,7 +1,7 @@
 /* Fonts */
 
 @font-face {
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum";
   font-style: normal;
   font-weight: 400;
   src: local("Cuprum"),
@@ -11,7 +11,7 @@
 }
 
 @font-face {
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum";
   font-style: normal;
   font-weight: 700;
   src: local("Cuprum"),
@@ -21,7 +21,7 @@
 }
 
 @font-face {
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum";
   font-style: italic;
   font-weight: 400;
   src: local("Cuprum"),
@@ -31,7 +31,7 @@
 }
 
 @font-face {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
   src: local("PT Sans"),
@@ -41,7 +41,7 @@
 }
 
 @font-face {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
   src: local("PT Sans"),
@@ -256,6 +256,7 @@ img {
 /* Main */
 
 .main-button {
+  font-family: "Cuprum", sans-serif;
   font-size: 18px;
   line-height: 14px;
   text-transform: uppercase;
@@ -273,7 +274,7 @@ img {
 }
 
 .main-heading {
-  font-family: "Cuprum", sans-serif;
+  font-family: "Cuprum", "Helvetica", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 30px;
@@ -720,14 +721,3 @@ catalog-filter-brand-list {  /*тут разобраться с селектор
   color: var(--basic-white);
 }
 
-.test-font-first {
-  font-family: "PT Sans", sans-serif;
-  font-size: 24px;
-  font-style: bold;
-}
-
-.test-font-second {
-  font-family: "Cuprum", sans-serif;
-  font-size: 24px;
-  font-style: normal;
-}
