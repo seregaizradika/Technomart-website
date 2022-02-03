@@ -977,6 +977,12 @@ catalog-filter-brand-list {  /*тут разобраться с селектор
   text-transform: uppercase;
 }
 
+.catalog-products-list {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
 .catalog-products-sort-button {
   color: var(--basic-black-opacity-03);
   border: none;
