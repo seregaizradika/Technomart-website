@@ -72,6 +72,7 @@
   --special-dark-blue: #212A3A;
   --special-blue-black: #1D2739;
   --special-light-grey: #C5C5C5;
+  --special-grey-modal: #F1F1F1;
   --special-grey: #B5B5B5;
   --special-beige: #F7F3EC;
   --special-dark-grey: #3D546F;
@@ -389,14 +390,24 @@ img {
   list-style: none;
   margin: 0;
   padding: 0;
+  padding-bottom: 200px; /*потом исправить выравниване контента и удалить*/
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-auto-rows: auto;
+  grid-template:  "materials instrument tech"
+                  "slider slider discount"
+                  "slider slider delivery";
+  grid-template-rows: 123px 123px 123px;
+  grid-template-columns: 300px 300px 300px;
   align-items: stretch;
   align-content: start;
   gap: 20px;
   outline: 5px solid rgb(0, 255, 0);
   outline-offset: -5px;
+}
+
+.features-list::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .features-item {
@@ -413,6 +424,7 @@ img {
   outline-offset: -5px;
   margin-bottom: 20px;
   background: var(--basic-black-opacity-03); /*для отладки*/
+  grid-area: slider;
 }
 
 .features h3 {
@@ -438,22 +450,27 @@ img {
 
 .features-item-materials {
   background-color: var(--basic-yellow);
+  grid-area: materilas;
 }
 
 .features-item-instruments {
   background-color: var(--basic-blue);
+  grid-area: instrument;
 }
 
 .features-item-tech {
   background-color: var(--basic-purple);
+  grid-area: tech;
 }
 
 .features-item-discount {
   background-color: var(--basic-light-green);
+  grid-area: discount;
 }
 
 .features-item-delivery {
   background-color: var(--basic-yellow);
+  grid-area: delivery;
 }
 
 .main-slider-list {
@@ -648,6 +665,7 @@ li.main-services-item > input[type=radio] {
 
 .main-company-wrapper {
   display: grid;
+  width: 940px;
   grid-template-columns: 2fr 1fr;
   margin: 0 auto;
   outline: 5px solid rgb(21, 255, 0);
@@ -880,15 +898,30 @@ p > textarea {
   list-style: none;
   line-height: 18px;
   text-transform: uppercase;
-
+  outline: 5px solid rgb(72, 5, 255);
+  outline-offset: -5px;
 }
 
 .bread-crumbs-link {
   color: var(--basic-black);
 }
+.product-category {
+  background: var(--basic-grey);
+}
+
+.catalog-wrapper {
+  display: grid;
+  width: 940px;
+  grid-template-columns: 220px 700px;
+  column-gap: 20px;
+  outline: 5px solid rgb(255, 238, 5);
+  outline-offset: -5px;
+}
 
 .catalog-filter {
   background: var(--basic-white);
+  outline: 5px solid rgb(5, 163, 255);
+  outline-offset: -5px;
 }
 
 .catalog-filter-heading {
@@ -941,6 +974,7 @@ catalog-filter-brand-list {  /*тут разобраться с селектор
 .catalog-filter-button {
   background: #FFFFFF;
   border: 1px solid var(--special-decorate-grey);
+  text-transform: uppercase;
 }
 
 .catalog-products-sort-button {
@@ -996,3 +1030,28 @@ catalog-filter-brand-list {  /*тут разобраться с селектор
   color: var(--basic-white);
 }
 
+.info-perforators {
+  background-color: var(--basic-grey);
+  outline: 5px solid rgb(255, 5, 243);
+  outline-offset: -5px;
+}
+
+.info-perforators > h2 {
+  margin-top: 64px;
+}
+
+.info-perforators > p {
+  margin-bottom: 68px;
+}
+
+.catalog-chart-modal {
+  width: 620px;
+  height:px;
+  margin: 0 auto;
+  outline: 5px solid rgb(84, 255, 5);
+  outline-offset: -5px;
+}
+
+.chart-modal-buttons {
+  background-color: var(--special-grey-modal);
+}
